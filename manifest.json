@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "网络请求监视器",
+  "short_name": "NetMonitor",
+  "version": "0.2.0",
+  "description": "不打开开发者工具，也能像 DevTools 网络面板一样查看页面的全部请求与响应。",
+  "minimum_chrome_version": "125",
+  "permissions": [
+    "debugger",
+    "tabs",
+    "webNavigation",
+    "webRequest",
+    "clipboardWrite"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "监视当前标签页的网络请求",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
